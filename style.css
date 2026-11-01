@@ -1,0 +1,248 @@
+/* تنظیمات کلی و فونت */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Vazirmatn', sans-serif;
+    background-color: #f4f4f4; /* رنگ پس‌زمینه کلی */
+    color: #333;
+    line-height: 1.8;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* استایل هدر */
+.site-header {
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.header-top {
+    background-color: #f9f9f9;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    padding-left: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.main-nav ul li {
+    margin-left: 20px;
+}
+
+.main-nav ul li a {
+    font-weight: 700;
+    color: #555;
+    transition: color 0.3s;
+}
+
+.main-nav ul li a:hover {
+    color: #c00; /* رنگ قرمز برای هاور */
+}
+
+.header-banner {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+.banner-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* چیدمان اصلی (گرید) */
+.container {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 15px;
+}
+
+.main-layout {
+    display: grid;
+    grid-template-columns: 300px 1fr; /* سایدبار 300 پیکسل، محتوا بقیه فضا */
+    gap: 30px;
+    align-items: start;
+}
+
+/* استایل سایدبار */
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.widget {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.widget h3 {
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: #222;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+/* باکس درباره ما */
+.about-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.sidebar-logo {
+    width: 60px;
+    height: 60px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.about-widget p {
+    font-size: 13px;
+    color: #666;
+    text-align: justify;
+}
+
+/* باکس برچسب‌ها */
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tags a {
+    background-color: #f0f0f0;
+    padding: 5px 10px;
+    font-size: 12px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    color: #444;
+    transition: background 0.3s;
+}
+
+.tags a:hover {
+    background-color: #c00;
+    color: #fff;
+    border-color: #c00;
+}
+
+/* باکس پست‌های اخیر */
+.recent-posts ul {
+    list-style: none;
+}
+
+.recent-posts ul li {
+    margin-bottom: 10px;
+    font-size: 14px;
+    position: relative;
+    padding-right: 15px;
+}
+
+.recent-posts ul li::before {
+    content: "■";
+    color: #ccc;
+    position: absolute;
+    right: 0;
+    font-size: 10px;
+    top: 5px;
+}
+
+.recent-posts ul li a {
+    color: #555;
+}
+
+.recent-posts ul li a:hover {
+    color: #c00;
+}
+
+/* استایل محتوای اصلی */
+.content-area {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.post-title {
+    font-size: 24px;
+    color: #111;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.post-image {
+    width: 100%;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.featured-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.post-text h2 {
+    font-size: 20px;
+    margin: 20px 0 15px;
+    color: #222;
+    text-align: center;
+}
+
+.post-text h3 {
+    font-size: 18px;
+    margin: 20px 0 10px;
+    color: #333;
+}
+
+.post-text p {
+    font-size: 15px;
+    color: #555;
+    text-align: justify;
+    margin-bottom: 15px;
+}
+
+/* ریسپانسیو برای موبایل و تبلت */
+@media (max-width: 768px) {
+    .main-layout {
+        grid-template-columns: 1fr; /* تبدیل به یک ستونه */
+    }
+    
+    .main-nav ul {
+        justify-content: center;
+        padding-left: 0;
+    }
+
+    .main-nav ul li {
+        margin: 0 10px;
+    }
+
+    .content-area {
+        padding: 20px;
+    }
+    
+    .post-title {
+        font-size: 20px;
+    }
+}
