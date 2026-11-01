@@ -3,93 +3,245 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>موتورستان | مرجع تخصصی موتورسیکلت</title>
+    <title>خرید و فروش موتور | باما</title>
     <link rel="stylesheet" href="style.css">
-    <!-- لینک فونت وزیرمتن از گوگل فونت -->
-    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+    <!-- لینک فونت وزیرمتن -->
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- لینک فونت آیکون‌ها (FontAwesome) برای آیکون‌های سرچ، مکان و ... -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
     <!-- هدر سایت -->
     <header class="site-header">
-        <div class="header-top">
-            <nav class="main-nav">
-                <ul>
-                    <li><a href="#">خانه</a></li>
-                    <li><a href="#">عناوین مطالب</a></li>
-                    <li><a href="#">تماس با من</a></li>
-                </ul>
-            </nav>
-        </div>
-        <div class="header-banner">
-            <!-- تصویر هدر که شما آپلود کردید -->
-            <img src="header.png" alt="بنر موتورستان" class="banner-img">
+        <div class="header-container">
+            <div class="right-menu">
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="#">خودرو</a></li>
+                        <li><a href="#" class="active">موتورسیکلت</a></li>
+                        <li><a href="#">سنگین</a></li>
+                        <li><a href="#">باما</a></li>
+                    </ul>
+                </nav>
+            </div>
+            
+            <div class="center-logo">
+                <!-- لوگوی سایت -->
+                <img src="header.png" alt="لوگوی سایت" class="logo-img">
+            </div>
+
+            <div class="left-actions">
+                <button class="search-btn"><i class="fas fa-search"></i></button>
+                <button class="login-btn"><i class="fas fa-user"></i> ورود</button>
+                <button class="submit-ad-btn">+ ثبت آگهی</button>
+            </div>
         </div>
     </header>
 
-    <!-- بدنه اصلی سایت -->
-    <div class="container main-layout">
+    <!-- مسیر سایت (Breadcrumb) -->
+    <div class="breadcrumb-container">
+        <div class="container">
+            <ul class="breadcrumb">
+                <li><a href="#">موتورسیکلت</a></li>
+                <li><i class="fas fa-chevron-left"></i></li>
+                <li>باما</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- بدنه اصلی -->
+    <main class="container main-layout">
         
-        <!-- ستون سمت راست (سایدبار) -->
-        <aside class="sidebar">
+        <!-- ستون سمت راست: فیلترها -->
+        <aside class="sidebar-filters">
+            <div class="filter-header">
+                <h3>فیلترها</h3>
+                <a href="#" class="clear-filters">فیلترهای اخیر <i class="fas fa-info-circle"></i></a>
+            </div>
+
+            <!-- دسته‌بندی تصویری -->
+            <div class="filter-section categories">
+                <div class="cat-item">
+                    <img src="image.png" alt="آفرود">
+                    <span>آفرود</span>
+                </div>
+                <div class="cat-item">
+                    <img src="image.png" alt="سی‌بی">
+                    <span>سی‌بی</span>
+                </div>
+                <div class="cat-item">
+                    <img src="image.png" alt="اسپرت">
+                    <span>اسپرت</span>
+                </div>
+                <div class="cat-item">
+                    <img src="image.png" alt="کروزر">
+                    <span>کروزر</span>
+                </div>
+                <div class="cat-item">
+                    <img src="image.png" alt="اسکوتر">
+                    <span>اسکوتر</span>
+                </div>
+                <div class="cat-item">
+                    <img src="image.png" alt="ریس">
+                    <span>ریس</span>
+                </div>
+                <button class="show-all-cats">+ نمایش همه بدنه‌ها</button>
+            </div>
+
+            <!-- فیلتر سال تولید -->
+            <div class="filter-section">
+                <h4>سال تولید</h4>
+                <div class="input-row">
+                    <select><option>از سال</option></select>
+                    <select><option>تا سال</option></select>
+                </div>
+            </div>
+
+            <!-- فیلتر کارکرد -->
+            <div class="filter-section">
+                <div class="filter-title-row">
+                    <h4>کارکرد (کیلومتر)</h4>
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                    </label>
+                    <span class="zero-text">صفر کیلومتر</span>
+                </div>
+                <div class="input-row">
+                    <select><option>از کارکرد</option></select>
+                    <select><option>تا کارکرد</option></select>
+                </div>
+            </div>
+
+            <!-- فیلتر حجم موتور -->
+            <div class="filter-section">
+                <div class="filter-title-row">
+                    <h4>حجم موتور (CC)</h4>
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                    </label>
+                    <span class="zero-text">سنگین</span>
+                </div>
+                <div class="input-row">
+                    <select><option>از حجم</option></select>
+                    <select><option>تا حجم</option></select>
+                </div>
+            </div>
             
-            <!-- باکس معرفی -->
-            <div class="widget about-widget">
-                <div class="about-header">
-                    <img src="logo.png" alt="لوگوی موتورستان" class="sidebar-logo">
-                    <h3>علاقه‌مند به موتورسیکلت؟</h3>
-                </div>
-                <p>موتورستان با مدیریت سید محمد نواب صفوی و عرفان برادران کاشانی، با هدف معرفی و عرضه انواع موتورسیکلت از برندهای معتبر فعالیت می‌کند. ما تلاش می‌کنیم با ارائه اطلاعات دقیق، مشخصات فنی و امکان مقایسه مدل‌ها، مسیر انتخاب و خرید موتورسیکلت مناسب را برای مشتریان ساده‌تر کنیم. ادامه...</p>
-            </div>
-
-            <!-- باکس برچسب‌ها -->
-            <div class="widget tags-widget">
-                <h3>موتورسیکلت، موتورستان، خرید موتور، فروش موتور</h3>
-                <div class="tags">
-                    <a href="#">AEROX 155</a>
-                    <a href="#">یاماها</a>
-                    <a href="#">اسکوتر</a>
-                    <a href="#">موتورسیکلت</a>
-                    <a href="#">موتورستان</a>
-                    <a href="#">موتور</a>
+            <!-- فیلتر گیربکس -->
+            <div class="filter-section">
+                <h4>گیربکس</h4>
+                <div class="button-group">
+                    <button class="active">همه</button>
+                    <button>اتوماتیک</button>
+                    <button>دنده‌ای</button>
                 </div>
             </div>
-
-            <!-- باکس جدیدترین یادداشت‌ها -->
-            <div class="widget recent-posts">
-                <h3>جدیدترین یادداشت‌ها</h3>
-                <ul>
-                    <li><a href="#">یاماها 155 AEROX؛ اسکوتر اسپرت یاماها</a></li>
-                    <li><a href="#">مقدمه و آشنایی</a></li>
-                </ul>
-            </div>
-
         </aside>
 
-        <!-- ستون سمت چپ (محتوای اصلی) -->
-        <main class="content-area">
-            <article class="single-post">
-                <h1 class="post-title">یاماها 155 AEROX؛ اسکوتر اسپرت یاماها</h1>
-                
-                <div class="post-image">
-                    <!-- تصویر مقاله که شما آپلود کردید -->
-                    <img src="image.png" alt="یاماها 155 AEROX" class="featured-img">
+        <!-- ستون سمت چپ: لیست آگهی‌ها -->
+        <section class="ads-list">
+            <div class="ads-header">
+                <h2>خرید و فروش موتور</h2>
+                <div class="sort-dropdown">
+                    <span>مرتب‌سازی:</span>
+                    <select>
+                        <option>ترتیب آگهی‌ها</option>
+                    </select>
                 </div>
+            </div>
 
-                <div class="post-text">
-                    <h2>یاماها 155 AEROX؛ اسکوتر اسپرت یاماها</h2>
-                    <p>یاماها 155 AEROX یکی از اسکوترهای اسپرت محبوب یاماهاست که با طراحی جذاب، عملکرد مناسب و امکانات مدرن، برای استفاده شهری و علاقه‌مندان به اسکوترهای اسپرت طراحی شده است.</p>
+            <!-- آیتم آگهی 1 -->
+            <article class="ad-card">
+                <div class="ad-image">
+                    <img src="image.png" alt="موتور بنلی">
+                    <span class="photo-count"><i class="fas fa-camera"></i> ۱</span>
+                    <span class="badge-top"><i class="fas fa-crown"></i></span>
+                </div>
+                <div class="ad-details">
+                    <h3 class="ad-title">باجاج، دومینار ۲۵۰</h3>
+                    <p class="ad-subtitle">۱۴۰۵، کارکرد ۱,۰۰۰ کیلومتر</p>
                     
-                    <h3>طراحی ظاهری</h3>
-                    <p>و فرم خاص قسمت جلویی، ظاهر این LED طراحی ظاهری تهاجمی و اسپرت دارد. خطوط بدنه، چراغ‌های AEROX 155 اسکوتر را از بسیاری از مدل‌های شهری متمایز می‌کند. طراحی آن حال‌وهوای موتورسیکلت‌های اسپرت یاماها را نیز به همراه دارد.</p>
-                    
-                    <h3>موتور و عملکرد</h3>
-                    <p>این اسکوتر از یک پیشرانه تک‌سیلندر 155 سی‌سی، چهارزمانه و آب‌خنک استفاده می‌کند. فناوری VVA نیز به موتور کمک می‌کند تا در محدوده‌های مختلف دور موتور، عملکرد مناسبی داشته باشد.</p>
-                    <p>قدرت موتور در نسخه 155 بازار هند حدود 15 اسب‌بخار و گشتاور آن 13.9 نیوتن‌متر است. انتقال قدرت نیز به...</p>
+                    <div class="ad-location-time">
+                        <span><i class="far fa-clock"></i> لحظاتی پیش</span>
+                        <span><i class="fas fa-map-marker-alt"></i> تهران، ازگل</span>
+                    </div>
+                </div>
+                <div class="ad-price">
+                    <span class="price-value">۱,۲۵۰,۰۰۰,۰۰۰ تومان</span>
                 </div>
             </article>
-        </main>
 
+            <!-- آیتم آگهی 2 -->
+            <article class="ad-card">
+                <div class="ad-image">
+                    <img src="image.png" alt="هوندا PCX">
+                    <span class="photo-count"><i class="fas fa-camera"></i> ۴</span>
+                    <span class="badge-store"><i class="fas fa-store"></i> فروشگاه موتورسیکلت...</span>
+                </div>
+                <div class="ad-details">
+                    <h3 class="ad-title">هوندا، PCX ۱۶۰</h3>
+                    <p class="ad-subtitle">۱۴۰۵، صفر کیلومتر</p>
+                    
+                    <div class="ad-location-time">
+                        <span><i class="far fa-clock"></i> لحظاتی پیش</span>
+                        <span><i class="fas fa-map-marker-alt"></i> تهران، ۱۷ شهریور</span>
+                    </div>
+                </div>
+                <div class="ad-price">
+                    <span class="price-value">۸۷۵,۰۰۰,۰۰۰ تومان</span>
+                    <span class="price-installment">پیش پرداخت ۸۰,۰۰۰,۰۰۰ تومان</span>
+                </div>
+            </article>
+
+            <!-- آیتم آگهی 3 -->
+            <article class="ad-card">
+                <div class="ad-image">
+                    <img src="image.png" alt="تارو GP1">
+                    <span class="photo-count"><i class="fas fa-camera"></i> ۳</span>
+                </div>
+                <div class="ad-details">
+                    <h3 class="ad-title">تارو، GP1-۲۰۰</h3>
+                    <p class="ad-subtitle">۱۴۰۴، صفر کیلومتر</p>
+                    
+                    <div class="ad-location-time">
+                        <span><i class="far fa-clock"></i> لحظاتی پیش</span>
+                        <span><i class="fas fa-map-marker-alt"></i> تهران، لارمک</span>
+                    </div>
+                </div>
+                <div class="ad-price">
+                    <span class="price-value">۸۵۰,۰۰۰,۰۰۰ تومان</span>
+                </div>
+            </article>
+            
+            <!-- آیتم آگهی 4 -->
+            <article class="ad-card">
+                <div class="ad-image">
+                    <img src="image.png" alt="یاماها NMAX">
+                    <span class="photo-count"><i class="fas fa-camera"></i> ۲</span>
+                </div>
+                <div class="ad-details">
+                    <h3 class="ad-title">یاماها، NMAX NEO</h3>
+                    <p class="ad-subtitle">۱۴۰۵، صفر کیلومتر</p>
+                    
+                    <div class="ad-location-time">
+                        <span><i class="far fa-clock"></i> لحظاتی پیش</span>
+                        <span><i class="fas fa-map-marker-alt"></i> تهران، ستارخان</span>
+                    </div>
+                </div>
+                <div class="ad-price">
+                    <span class="price-value">تماس بگیرید</span>
+                </div>
+            </article>
+
+        </section>
+    </main>
+
+    <!-- دکمه شناور ثبت آگهی در موبایل -->
+    <div class="floating-add-btn">
+        <button>+ ثبت آگهی</button>
     </div>
 
 </body>
